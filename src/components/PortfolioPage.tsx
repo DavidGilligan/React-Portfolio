@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 
 const ACCENT = "#219b93";
 
+const ASSET_BASE = (import.meta as any).env?.BASE_URL ?? "/";
+
 /* ---------- Dark mode hook (local state + localStorage only) ---------- */
 
 function useDarkMode() {
@@ -223,105 +225,105 @@ const OTHER_CERTS: Certificate[] = [
     date: "30/07/2025",
     provider: "Codecademy",
     note: "Full Python course covering fundamentals and applied programming.",
-    image: "/images/Python3.png"
+    image: `${ASSET_BASE}images/Python3.png`
   },
   {
     title: "Learn SQL Course",
     date: "23/07/2025",
     provider: "Codecademy",
     note: "Comprehensive SQL course covering querying and data manipulation.",
-    image: "/images/SQLCourse.png"
+    image: `${ASSET_BASE}images/SQLCourse.png`
   },
   {
     title: "Learn Statistics with Python Course",
     date: "18/07/2025",
     provider: "Codecademy",
     note: "Statistics and data analysis techniques using Python.",
-    image: "/images/PyStats.png"
+    image: `${ASSET_BASE}images/PyStats.png`
   },
   {
     title: "Learn How to Code",
     date: "14/07/2025",
     provider: "Codecademy",
     note: "General-purpose programming foundations refresher.",
-    image: "/images/Learn how to code.png"
+    image: `${ASSET_BASE}images/Learn how to code.png`
   },
 
   {
     title: "JavaScript Intermediate",
     date: "11/07/2024",
     provider: "SoloLearn",
-    image: "/images/Python Intermediate.png"
+    image: `${ASSET_BASE}images/Python Intermediate.png`
   },
   {
     title: "Java Intermediate",
     date: "11/07/2024",
     provider: "SoloLearn",
     note: "Intermediate certificate for Java.",
-    image: "/images/Java Intermediate.png"
+    image: `${ASSET_BASE}images/Java Intermediate.png`
   },
   {
     title: "Angular Course",
     date: "11/07/2024",
     provider: "SoloLearn",
     note: "Main Angular framework course.",
-    image: "/images/Angular Course.png"
+    image: `${ASSET_BASE}images/Angular Course.png`
   },
   {
     title: "Python Intermediate",
     date: "10/07/2024",
     provider: "SoloLearn",
     note: "Intermediate-level Python training.",
-    image: "/images/Python Intermediate.png"
+    image: `${ASSET_BASE}images/Python Intermediate.png`
   },
   {
     title: "Python Developer",
     date: "10/07/2024",
     provider: "SoloLearn",
     note: "Python developer-focused applied module.",
-    image: "/images/Python Developer.png"
+    image: `${ASSET_BASE}images/Python Developer.png`
   },
   {
     title: "Introduction to C#",
     date: "10/07/2024",
     provider: "SoloLearn",
     note: "Introductory C# fundamentals.",
-    image: "/images/Introduction to C Sharp.png"
+    image: `${ASSET_BASE}images/Introduction to C Sharp.png`
   },
   {
     title: "Introduction to C",
     date: "10/07/2024",
     provider: "SoloLearn",
     note: "Basic introduction to the C programming language.",
-    image: "/images/Introduction to C.png"
+    image: `${ASSET_BASE}images/Introduction to C.png`
   },
   {
     title: "Angular: Front-End for Beginners",
     date: "09/07/2024",
     provider: "SoloLearn",
     note: "Beginner-level Angular front-end development.",
-    image: "/images/Front End for Beginners.png"
+    image: `${ASSET_BASE}images/Front End for Beginners.png`
   },
   {
     title: "Coding for Data",
     date: "08/07/2024",
     provider: "SoloLearn",
     note: "Data structures, formats, and handling concepts.",
-    image: "/images/Coding for Data.png"
+    image: `${ASSET_BASE}images/Coding for Data.png`
   },
   {
     title: "Coding Foundations",
     date: "07/07/2024",
     provider: "SoloLearn",
     note: "Fundamental programming concepts and logic.",
-    image: "/images/Coding Foundations.png"
+    image: `${ASSET_BASE}images/Coding Foundations.png`
   },
   {
     title: "Introduction to SQL",
     date: "06/07/2024",
     provider: "SoloLearn",
     note: "SQL basics and database querying.",
-    image: "/images/Introduction to SQL.png"
+    image: `${ASSET_BASE}images/Introduction to SQL.png`
   },
 
   {
@@ -329,14 +331,14 @@ const OTHER_CERTS: Certificate[] = [
     date: "19/03/2024",
     provider: "SoloLearn",
     note: "General understanding of technology in business.",
-    image: "/images/Tech for Everyone.png"
+    image: `${ASSET_BASE}images/Tech for Everyone.png`
   },
   {
     title: "Web Development",
     date: "17/03/2024",
     provider: "SoloLearn",
     note: "Covers HTML, CSS, and JavaScript fundamentals.",
-    image: "/images/Web Development.png"
+    image: `${ASSET_BASE}images/Web Development.png`
   },
 
   {
@@ -344,14 +346,14 @@ const OTHER_CERTS: Certificate[] = [
     date: "24/10/2023",
     provider: "SoloLearn",
     note: "Basic introduction to Java programming.",
-    image: "/images/Introduction to Java.png"
+    image: `${ASSET_BASE}images/Introduction to Java.png`
   },
   {
     title: "Introduction to Python",
     date: "06/10/2023",
     provider: "SoloLearn",
     note: "Basic Python programming principles.",
-    image: "/images/Introduction to Python.png"
+    image: `${ASSET_BASE}images/Introduction to Python.png`
   },
 
   {
@@ -359,16 +361,17 @@ const OTHER_CERTS: Certificate[] = [
     date: "06/07/2023",
     provider: "SoloLearn",
     note: "HTML fundamentals and structure.",
-    image: "/images/Introduction to HTML.png"
+    image: `${ASSET_BASE}images/Introduction to HTML.png`
   },
   {
     title: "Introduction to CSS",
     date: "06/07/2023",
     provider: "SoloLearn",
     note: "Basic CSS styling and layout.",
-    image: "/images/Introduction to CSS.png"
+    image: `${ASSET_BASE}images/Introduction to CSS.png`
   }
 ];
+
 
 /* ---------- Background grid ---------- */
 
@@ -575,11 +578,11 @@ export default function PortfolioPage() {
               className="relative overflow-hidden rounded-3xl bg-neutral-900 text-white shadow-2xl ring-1 ring-black/5"
             >
               <div className="absolute inset-0">
-                <img
-                  src="/images/david-hero.jpg"
-                  alt="Background of David Gilligan"
-                  className="h-full w-full object-cover opacity-80"
-                />
+              <img
+                src={`${ASSET_BASE}images/david-hero.jpg`}
+                alt="Background of David Gilligan"
+                className="h-full w-full object-cover opacity-80"
+              />
                 <div className="absolute inset-0 bg-black/50" />
               </div>
 
