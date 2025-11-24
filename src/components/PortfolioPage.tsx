@@ -68,6 +68,14 @@ type Certificate = {
   image?: string;
 };
 
+type ERPSystem = {
+  product: string;
+  role: string;
+  company: string;
+  dates: string;
+  note?: string;
+};
+
 const WORK_EXPERIENCE: WorkItem[] = [
   {
     id: "semco",
@@ -154,7 +162,7 @@ const PREVIOUS_PART_TIME = [
   "Customer Assistant – Tesco Plc."
 ];
 
-const ERP_SYSTEMS = [
+const ERP_SYSTEMS: ERPSystem[] = [
   {
     product: "Mpower Suite (Ascertra)",
     role: "ERP Analyst and Super User",
@@ -437,9 +445,6 @@ export default function PortfolioPage() {
 
   const pageBg = enabled ? "bg-[#111111] text-white" : "bg-white text-gray-900";
   const cardBg = enabled ? "bg-black/40 text-white" : "bg-white/95 text-gray-900";
-  const smallCardBg = enabled
-    ? "bg-black/40 text-white"
-    : "bg-white/80 text-gray-900";
   const ringClass = enabled ? "ring-gray-800" : "ring-gray-100";
 
   return (
